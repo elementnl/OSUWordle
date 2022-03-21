@@ -53,12 +53,12 @@ body {
   }
 
 img {
-    max-width: 20%;
+    width:100%;
+    max-width: 300px;
     height: auto;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
 }
 
 #length {
@@ -115,12 +115,12 @@ img {
 }
 
 .keyboard-button {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-family:sans-serif;
     font-weight: 600;
     color:white;
     background-color:gray;
-    padding: 0.5rem;
+    padding: 0.45rem;
     margin: 0 2px;
     cursor: pointer;
     text-transform: uppercase;
