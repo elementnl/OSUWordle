@@ -3,17 +3,38 @@ import { OSUWORDS } from "./osu-words.js";
 import { WORDS6 } from "./words6.js";
 import { WORDS7 } from "./words7.js";
 
+// Aquire Date for Index
+function getDaysForIndex(startDate, todaysDate) {
+    const start = new Date(startDate);
+    const today = new Date(todaysDate);
+    const oneDay = 1000 * 60 * 60 * 24;
+    const diffInTime = today.getTime() - start.getTime();
+    const diffDays = Math.round(diffInTime / oneDay);
+    
+    return diffDays;
+}
+var today = new Date();
+var day = String(today.getDate()).padStart(2, '0');
+var month = String(today.getMonth()).padStart(2, '0');
+var year = today.getFullYear();
+today = month + '/' + day + '/' + year;
+console.log(getDaysForIndex("02/21/2022", today))
+
+//Local Storage Variables
+let currentWordIndex = getDaysForIndex("02/21/2022", today);
+let currentWord = OSUWORDS[currentWordIndex]
+
 const NUMBER_OF_GUESSES = 6;
 let guessesRemaining = NUMBER_OF_GUESSES;
 let currentGuess = [];
 let nextLetter = 0;
 // Picks a random word from the OSU-WORDS array
-let rightGuessString = OSUWORDS[Math.floor(Math.random() * OSUWORDS.length)]
+let rightGuessString = currentWord
 let lengthOfCorrectWord = rightGuessString.length
 document.getElementById("length").innerHTML = lengthOfCorrectWord
 //toastr.info(`${rightGuessString}`)
 
-
+initBoard();
 
 console.log(rightGuessString)
 
@@ -129,7 +150,7 @@ function checkGuess () {
     if (guessString === rightGuessString) {
         Swal.fire({
           title: 'Congrats!',
-          html: `The right word was <b style="text-transform:uppercase">${rightGuessString}</b>... and ❌ichigan still sucks.`,
+          html: `Today's word is <b style="text-transform:uppercase">${rightGuessString}</b>... and ❌ichigan still sucks.`,
           icon: 'success',
           confirmButtonText: 'Close'
         })
@@ -143,7 +164,7 @@ function checkGuess () {
         if (guessesRemaining === 0) {
           Swal.fire({
           title: 'Game Over!',
-          html: `The right word was <b style="text-transform:uppercase">${rightGuessString}</b>... but it's okay, ❌ichigan still sucks.`,
+          html: `Today's word was <b style="text-transform:uppercase">${rightGuessString}</b>... but it's okay, ❌ichigan still sucks.`,
           icon: 'error',
         })
         }
@@ -224,5 +245,3 @@ document.getElementById("keyboard-cont").addEventListener("click", (e) => {
 
     document.dispatchEvent(new KeyboardEvent("keyup", {'key': key}))
 })
-
-initBoard();
