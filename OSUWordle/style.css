@@ -110,6 +110,10 @@ img {
     margin: 0.5rem 0;
 }
 
+.third-row {
+    padding-bottom: 300px;
+}
+
 .keyboard-button {
     font-size: 1.5rem;
     font-family:sans-serif;
