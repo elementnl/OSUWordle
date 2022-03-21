@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="style.css">
         <link rel="shortcut icon" href="https://www.osu.edu/assets/site-dev/osu_navbar/images/favicon.ico">
         <link rel="apple-touch-icon" href="https://www.osu.edu/assets/site-dev/osu_navbar/images/apple-touch-icon.png">
+        <link rel="stylesheet" href="style.css">
         <link
             href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
             rel="stylesheet" />
@@ -20,7 +21,10 @@
         <div class="fixed-bg"></div>
         <img src="title.png">
         <h3>Today's word has <span id="length"></span> letters</h3>
+        <h5>New word in <span id="countdown"></span></h3>
         <h4>Hint: Think of places on campus, streets, notable buckeyes, or common phrases.</h4>
+        <p class="cred">Made by Varun K <a href="https://www.instagram.com/varunk._/">(Follow me on Instagram!)</a></p>
+            <br>
 
         <div id="game-board">
 
@@ -70,6 +74,7 @@
             src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
       
         <script src="./script.js" type="module"></script>
+        <script src="./countdown.js" type="module"></script>
       <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     </body>
 </html>
