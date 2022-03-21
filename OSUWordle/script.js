@@ -105,7 +105,7 @@ function checkGuess () {
     if (!(WORDS.includes(guessString) || OSUWORDS.includes(guessString) || WORDS6.includes(guessString) || WORDS7.includes(guessString))) {
         Swal.fire({
           title: 'What?!',
-          text: `Maybe try speaking English next time 😬`,
+          text: `There's like 300,000 words, I guess I don't know that one. 😬`,
           icon: 'warning',
           confirmButtonText: 'Ok'
         })
