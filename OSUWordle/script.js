@@ -18,7 +18,7 @@ var day = String(today.getDate()).padStart(2, '0');
 var month = String(today.getMonth()).padStart(2, '0');
 var year = today.getFullYear();
 today = month + '/' + day + '/' + year;
-console.log(getDaysForIndex("08/21/2022", today))
+console.log(getDaysForIndex("01/20/2023", today))
 
 //Local Storage Variables
 let currentWordIndex = getDaysForIndex("08/21/2022", today);
