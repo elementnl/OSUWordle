@@ -22,7 +22,7 @@ console.log(getDaysForIndex("08/20/2022", today))
 
 //Local Storage Variables
 let currentWordIndex = getDaysForIndex("08/20/2022", today);
-let currentWord = OSUWORDS[2]
+let currentWord = OSUWORDS[22]
 
 const NUMBER_OF_GUESSES = 6;
 let guessesRemaining = NUMBER_OF_GUESSES;
