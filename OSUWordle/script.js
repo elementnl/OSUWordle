@@ -21,7 +21,7 @@ today = month + '/' + day + '/' + year;
 console.log(getDaysForIndex("01/20/2023", today))
 
 //Local Storage Variables
-let currentWordIndex = getDaysForIndex("08/21/2022", today);
+let currentWordIndex = getDaysForIndex("01/20/2023", today);
 let currentWord = OSUWORDS[currentWordIndex]
 
 const NUMBER_OF_GUESSES = 6;
